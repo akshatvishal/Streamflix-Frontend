@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Banner = styled.div`
-  height: 60vh;
+  height: 70vh;
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -41,7 +41,7 @@ export const BannerContent = styled.div`
 `;
 
 export const BannerImg = styled.img`
-  height: 60vh;
+  height: 70vh;
   width: 100%;
   object-fit: cover;
 

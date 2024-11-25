@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.212);
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    max-height: 7vh;
+    width: 100%;
+    color: white;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);    
+    padding: 0.5rem;
+}
+.section{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+}
