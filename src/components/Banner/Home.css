@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.hello {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner {
+  background-color: black;
+  text-align: center;
+}
+.movie-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  font-size: 2.5rem;
+  font-weight: bold;
+  z-index: 1;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional for readability */
+}
