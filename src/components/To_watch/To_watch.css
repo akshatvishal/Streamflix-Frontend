@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.continue{
+    margin: 2rem;
+    color: white;
+    background-color: black;
+}
+.continue h1{
+    margin-bottom: 2rem;
+}
