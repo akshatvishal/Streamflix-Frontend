@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "../Banner/Banner";
 import Navbar from "../Navbar/Navbar";
 import To_watch from "../To_watch/To_watch";
+import Categories from "../Categories/Categories";
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       <Navbar/>
       <Banner />
       <To_watch/>
+      <Categories/>
     </div>
   );
 };

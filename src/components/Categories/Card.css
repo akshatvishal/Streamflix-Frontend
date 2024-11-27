@@ -1,0 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Lilita+One&family=Londrina+Outline&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&family=Varela+Round&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.image{
+    margin-left: 3.5rem;
+    max-height: 15rem;
+    z-index: 2;
+}
+.images{
+    display: flex;
+    margin: 1.5rem 0rem;
+}
+.single{
+    height: 15rem;
+    width: max-content;
+    display: flex;
+}
+.index{
+    position: absolute;
+    font-size: 15rem;
+    font-family: "Londrina Outline", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  z-index: 1;
+}   
