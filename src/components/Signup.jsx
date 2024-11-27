@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './Signup.css';
+import { useNavigate } from "react-router-dom";
 
 function Register() {
   const [email, setEmail] = useState("");
@@ -10,6 +11,8 @@ function Register() {
   const [username, setUsername] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");
+
+  const navigate=useNavigate();
 
   async function Signup(e) {
     e.preventDefault();
@@ -167,13 +170,13 @@ function Register() {
           </div>
 
           <div className="button">
-          <button type="submit">Sign Up</button>
+          <button  type="submit">Create Account</button>
           </div>
           
         </form>
         
         <div className="existed">
-          <p>Already have an account?</p> <button>Login</button>
+          <p>Already have an account?</p> <button onClick={()=> navigate('/Login')} >Login</button>
         </div>
 
         {message && <p className="message">{message}</p>}
