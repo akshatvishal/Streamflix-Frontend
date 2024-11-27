@@ -1,0 +1,68 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Lilita+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&family=Varela+Round&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style: normal;
+}
+.hello {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner {
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  position: relative;
+}
+.banner_info {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%); 
+  font-size: 2.5rem;
+  font-weight: bold;
+  z-index: 1;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+.movie-title{
+  font-size: 3rem;
+  font-weight:600;
+  text-shadow: 4px 5px 3px rgba(0, 0, 0, 0.7); 
+}
+.description{
+  font-size: 1rem;
+  max-width: 25rem;
+}
+.duration{
+  font-size: 1rem;
+}
+.butt{
+  padding: 0.8em 2.3rem;
+}
+.button_watch{
+  background-color: red;
+  border: none;
+  color: white;
+  border-radius: 1rem;
+}
+.button_add-list{
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+}
+.buttons{
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}

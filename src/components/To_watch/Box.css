@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.Boxes{
+    display: flex;
+    gap: 3rem;
+}
+.Box img{
+    max-height: 25vh;
+    max-width: 20vw;
+}
+.Box p{
+    margin-top: 0.6rem
+}
