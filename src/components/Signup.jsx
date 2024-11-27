@@ -58,37 +58,39 @@ function Register() {
 
   return (
     <div className="register-container">
-      <center>
-        <h1>Sign-up Page</h1>
-        <form onSubmit={Signup}>
-          <input
-            type="email"
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email"
-            value={email}
-            required
-          />
-          <input
-            type="password"
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password"
-            value={password}
-            required
-          />
-          <input
-            type="password"
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            placeholder="Confirm Password"
-            value={confirmPassword}
-            required
-          />
-          <input
+       <div className="leftpart">
+         <div className="textpart">
+           <p className="text">Let’s Get Started!</p>
+         </div>
+       </div>
+
+       <div className="rightpart">
+
+       <div className="logo">
+          <img src="https://s3-alpha-sig.figma.com/img/afec/ea0a/14d8bdc23e35977a02474bbfe9928d8a?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=MBtlSZtO6qomHmkhlSUVn79mydCrCXrwEfP-BJtpVXW7gA7T9rGrYAr639C6qqzavkAwPSK9QmoRDvsje2p-u2iZfepRJxb-ulbchxxDhQj4ipwqDgFmlIdSDOigzRyM6PeaGXbIi1sxVVmyVTAjCbWb7nIofuMFgKpqFmqgNEqGOEvdrjkyJsi8OJuvdiAavDHyzDNowTrCf1KUNBaLqs~KrJkYuJVKaB2V3nKdoaddEfGNHiUXOSP1F91JQKpVhEyBw~UBu8L8a5j6RdxE3PoryNiUe4vxJNVARRRk5xVswmiNxZYuhUBrq8fdBFiR5XJZC3IA3kjb~qOhC9q1lA__" alt="" />
+        </div> 
+
+       
+        
+       <div className="margin-manager">
+        <div className="createaccount">
+          create account
+         </div>
+        <form className="form" onSubmit={Signup}>
+         <div className="name">
+           <div className="firstname">
+           <p>First Name</p>
+           <input
             type="text"
             onChange={(e) => setFirstName(e.target.value)}
             placeholder="First Name"
             value={firstName}
             required
-          />
+          /> 
+           </div>
+
+          <div className="lastname">
+          <p>Last Name</p>
           <input
             type="text"
             onChange={(e) => setLastName(e.target.value)}
@@ -96,24 +98,89 @@ function Register() {
             value={lastName}
             required
           />
-          <input
+          </div>
+
+         </div>
+
+         <div className="usrandno">
+           <div className="username">
+             <p>Username</p>
+             <input
             type="text"
             onChange={(e) => setUsername(e.target.value)}
             placeholder="Username"
             value={username}
             required
           />
-          <input
+
+           </div>
+           <div className="mobileno">
+             <p>Mobile-no</p>
+             <input
             type="number"
             onChange={(e) => setPhoneNumber(e.target.value)}
             placeholder="Phone Number"
             value={phoneNumber}
             required
           />
+
+           </div>
+         </div>
+
+         <div className="email">
+           <p>E-mail</p>
+           <input
+            type="email"
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email"
+            value={email}
+            required
+          />
+         </div>
+
+         <div className="password">
+          <p>Password</p>
+          <input
+            type="password"
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+            value={password}
+            required
+          />
+         </div>
+          
+          <div className="confirm">
+            <p>Confirm password</p>
+            <input
+            type="password"
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            placeholder="Confirm Password"
+            value={confirmPassword}
+            required
+          />
+
+          </div>
+
+          <div className="terms">
+          <input type="checkbox" required/>
+          <p>I agree with terms and conditions</p>
+          </div>
+
+          <div className="button">
           <button type="submit">Sign Up</button>
+          </div>
+          
         </form>
+        
+        <div className="existed">
+          <p>Already have an account?</p> <button>Login</button>
+        </div>
+
         {message && <p className="message">{message}</p>}
-      </center>
+        </div>
+       </div>
+
+
     </div>
   );
 }
