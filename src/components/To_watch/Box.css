@@ -13,3 +13,16 @@
 .Box p{
     margin-top: 0.6rem
 }
+.Box{
+    border-radius: 2rem;
+    border: 2px solid;
+    transition: 1s transform ease;
+}
+.Box:hover{
+    transform: scale(1.1);
+}
+.show{
+    color: black;
+    background-color: white;
+    width: max-content;
+}   

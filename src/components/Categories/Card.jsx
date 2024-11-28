@@ -11,7 +11,7 @@ const navigate=useNavigate();
         category.map((item,i) => (
           <div className="single" key={item.id} onClick={()=>{navigate(`/Home/${item.id}`)}}>
             <h1 className="index">{`${++i}`}</h1>
-            <img className="image" src={item.poster} alt="" />
+            <img className="image" src={item.poster} alt=""/>
           </div>
         ))
       }

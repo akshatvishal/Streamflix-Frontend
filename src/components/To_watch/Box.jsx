@@ -1,8 +1,11 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Datacontext } from "../../Context/dataContext";
 import "./Box.css";
+import { useNavigate } from "react-router-dom";
 
 const Box = () => {
+  const navigate = useNavigate();
+  const [hoveredIndex, setHoveredIndex] = useState(null); // Track which movie is being hovered over
   const { data } = useContext(Datacontext);
   const [loading, setLoading] = useState(true);
 
@@ -24,13 +27,26 @@ const Box = () => {
   return (
     <div className="Boxes">
       {data.map((item, index) => (
-        <div key={index} className="Box">
+        <div
+          key={index}
+          className="Box"
+          onClick={() => {
+            navigate(`/Home/${item.id}`);
+          }}
+          onMouseEnter={() => setHoveredIndex(index)}
+          onMouseLeave={() => setHoveredIndex(null)}
+        >
           <img
             src={item.poster}
             alt={item.title || "Movie Poster"}
             className="BoxPoster"
           />
-          <p className="BoxTitle">{item.title}</p>
+          {hoveredIndex === index && (
+            <div className="show">
+              <p>hi</p>
+              <p className="BoxTitle">{item.title}</p>
+            </div>
+          )}
         </div>
       ))}
     </div>
