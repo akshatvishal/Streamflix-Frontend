@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
+
 import { useNavigate} from "react-router-dom";
 import "./Profile.css";
 
@@ -90,12 +91,13 @@ const Profile = () => {
     input: {  },
   };
   return (
+
     <div className="container-big">
       
       <nav className="navv" style={styles.navbar}>
         <button
           style={styles.button}
-            onClick={() => navigate("/")} 
+            onClick={() => navigate("/Home  ")} 
             >
           Home
         </button>

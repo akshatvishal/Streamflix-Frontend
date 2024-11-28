@@ -12,11 +12,7 @@ const Navbar = () => {
     <div className="nav">
       <img src={logo} alt="logo" />
       <ul className="section">
-        <li>
-          <Link to="home" smooth={true} duration={500}>
-            Home
-          </Link>
-        </li>
+      <li onClick={() => navigate("/home")}>Home</li>
         <li>
           <Link to="categories" smooth={true} duration={500}>
             Movies
