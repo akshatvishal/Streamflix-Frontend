@@ -1,28 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { Datacontext } from "../../Context/dataContext";
 import axios from "axios";
 import Card from "./Card";
 
 const Categories = () => {
-  const [data, setData] = useState([]);
+const {data}=useContext(Datacontext)
 
-  // Fetch movies data
-  const getMovies = async () => {
-    try {
-      const response = await axios.get(
-        "https://streamflix-6rvf.onrender.com/api/movies/"
-      );
-      setData(response.data);
-    } catch (error) {
-      console.log("Error in fetching data from API:", error);
-    }
-  };
-
-  // Fetch data when the component loads
-  useEffect(() => {
-    getMovies();
-  }, []);
-
-  // Filter movies by category
   const filterMoviesByCategory = (categoryName) => {
     return data.filter((item) =>
       item.categories.some((cat) => cat.category_name === categoryName)
@@ -35,7 +18,7 @@ const Categories = () => {
   const southMovies = filterMoviesByCategory("South indian");
 
   return (
-    <div style={{color:"white" , margin:"5rem 0rem"}}>
+    <div  id="categories" className="categories-section" style={{color:"white" , margin:"5rem 0rem"}}>
       <h1>Punjabi Movies</h1>
       {punjabiMovies.length > 0 ? (
         <Card category={punjabiMovies} />

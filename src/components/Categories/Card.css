@@ -10,15 +10,22 @@
     margin-left: 3.5rem;
     max-height: 15rem;
     z-index: 2;
+    transition: 1s transform ease;
 }
+.image:hover{
+    transform: scale(1.1);
+}
+
 .images{
     display: flex;
     margin: 1.5rem 0rem;
 }
+
 .single{
     height: 15rem;
     width: max-content;
     display: flex;
+    cursor: pointer;
 }
 .index{
     position: absolute;
