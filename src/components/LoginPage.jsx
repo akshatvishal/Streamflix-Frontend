@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -9,15 +9,26 @@ const LoginPage = () => {
   const [password, setPassword] = useState("");
   const [mess, setMess] = useState("");
   const [loading, setLoading] = useState(false); 
+  const [rememberme,setrememberme]=useState(false);
   const navigate = useNavigate();
+
+  useEffect(()=>{
+     if(username===localStorage.getItem("useremail")){
+       setPassword(localStorage.getItem("passkey"))
+     }
+  },[username])
+
+  const handlecheck = (event) => {
+     setrememberme(event.target.checked);
+     }
 
   async function handleSubmit(e) {
     e.preventDefault();
     setMess(""); 
     setLoading(true); 
     console.log(username);
-    let item = { username, password };
-
+    
+     
     try {
       const response = await axios.post(
         "https://streamflix-6rvf.onrender.com/api/login/",
@@ -29,6 +40,10 @@ const LoginPage = () => {
       console.log(response.data.token);
       const token = response.data.token;
       if (token) {
+        if(rememberme){
+          localStorage.setItem("useremail",username);
+          localStorage.setItem("passkey",password);
+        }
         localStorage.setItem("token", JSON.stringify(token));
         setMess("Login successful! Redirecting...");
         setTimeout(() => navigate("/Home"), 1000);
@@ -87,7 +102,7 @@ const LoginPage = () => {
 
             <div className="message">{mess}</div>
             <div className="remember">
-              <input type="checkbox" />
+              <input type="checkbox" onChange={handlecheck} />
               Remember me
             </div>
 
