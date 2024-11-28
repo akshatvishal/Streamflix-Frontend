@@ -6,6 +6,7 @@ import Signup from "./components/Signup";
 import LoginPage from "./components/LoginPage";
 import Description from "./components/Description/Description";
 import { DataProvider } from "./Context/dataContext"; // Make sure this is at the top level
+import Profile from "./components/Profile/Profile";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/Home" element={<Home />}></Route>
           <Route path="/Home/:id" element={<Description />}></Route>
           <Route path="/Login" element={<LoginPage />}></Route>
+          <Route path="/Profile" element={<Profile />}></Route>
           
         </Routes>
       </Router>
