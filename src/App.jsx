@@ -5,7 +5,8 @@ import Home from "./components/Home/Home";
 import Signup from "./components/Signup";
 import LoginPage from "./components/LoginPage";
 import Description from "./components/Description/Description";
-import { DataProvider } from "./Context/dataContext"; // Make sure this is at the top level
+import Mylist from './components/Mylist/Mylist'
+import { DataProvider } from "./Context/dataContext";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/Home" element={<Home />}></Route>
           <Route path="/Home/:id" element={<Description />}></Route>
           <Route path="/Login" element={<LoginPage />}></Route>
+          <Route path="/Home/List" element={<Mylist />}></Route>
           
         </Routes>
       </Router>

@@ -4,8 +4,10 @@ import search from "./assets/search.png";
 import profile from "./assets/profile.png";
 import "./Navbar.css";
 import { Link } from "react-scroll"; // Add this import
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate=useNavigate();
   return (
     <div className="nav">
       <img src={logo} alt="logo" />
@@ -20,7 +22,7 @@ const Navbar = () => {
             Movies
           </Link>
         </li>
-        <li>My list</li>
+        <li onClick={()=>navigate('/Home/List')}>My list</li>
         <li>
           <img src={search} alt="search" />
         </li>
