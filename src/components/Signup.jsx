@@ -44,11 +44,11 @@ function Register() {
         body: JSON.stringify(formData),
       });
 
-      console.log(response);
+     // console.log(response);
 
       const result = await response.json();
 
-      console.log(result);
+     // console.log(result);
 
       if (response.ok) {
         setMessage("Sign-up successful!");
@@ -68,7 +68,7 @@ function Register() {
        {loading && <Loader />} 
        <div className="leftpart">
          <div className="textpart">
-           <p className="text">Let’s Get Started!</p>
+           <p className="text">Let's Get Started!</p>
          </div>
        </div>
 
