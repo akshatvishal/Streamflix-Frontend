@@ -97,7 +97,7 @@ const Profile = () => {
       <nav className="navv" style={styles.navbar}>
         <button
           style={styles.button}
-            onClick={() => navigate("/")} 
+            onClick={() => navigate("/Home  ")} 
             >
           Home
         </button>
