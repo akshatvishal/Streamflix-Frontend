@@ -1,11 +1,8 @@
 import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
-<<<<<<< HEAD
-import Navbar from "../Navbar/Navbar";
-=======
+
 import { useNavigate} from "react-router-dom";
 import "./Profile.css";
->>>>>>> 5b35507f51c611d76e880cf855250acf6707ff20
 
 const Profile = () => {
   const [profile, setProfile] = useState(null);
