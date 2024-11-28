@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-box{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color:white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header{
+    width: 90vw;
+    height: 3rem;
+    background-color: red;
+    display: flex;
+    align-items: center;
+}
+
+.home{
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    width: 4rem;
+    height: 2rem;
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
+.home:hover{
+    background-color: white;
+    color: black;
+}
+
+.word{
+    margin-left: 25rem;
+    font-weight: bold;
+}

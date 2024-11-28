@@ -30,7 +30,7 @@ const Navbar = () => {
             Movies
           </Link>
         </li>
-        <li>My list</li>
+        <li onClick={()=>navigate('/Home/List')}>My list</li>
         <li>
         <input
         className='search'
