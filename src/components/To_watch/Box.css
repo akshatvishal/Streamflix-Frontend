@@ -21,8 +21,10 @@
 .Box:hover{
     transform: scale(1.1);
 }
-.show{
-    color: black;
-    background-color: white;
-    width: max-content;
+.pop{
+ background-color: white;
+ border-bottom-left-radius: 2rem;
+ border-bottom-right-radius: 2rem;
+ color: black;
+ padding: 1rem;
 }   

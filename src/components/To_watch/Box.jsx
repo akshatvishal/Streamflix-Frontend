@@ -36,17 +36,19 @@ const Box = () => {
           onMouseEnter={() => setHoveredIndex(index)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
-          <img
-            src={item.poster}
-            alt={item.title || "Movie Poster"}
-            className="BoxPoster"
-          />
-          {hoveredIndex === index && (
-            <div className="show">
-              <p>hi</p>
-              <p className="BoxTitle">{item.title}</p>
-            </div>
-          )}
+          <div className="show">
+            <img
+              src={item.poster}
+              alt={item.title || "Movie Poster"}
+              className="BoxPoster"
+            />
+            {hoveredIndex === index && (
+              <div className="pop">
+                <p className="BoxTitle">{item.title}</p>
+                <p className="BoxTitle">{item.title}</p>
+              </div>
+            )}
+          </div>
         </div>
       ))}
     </div>
