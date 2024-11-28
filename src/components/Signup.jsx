@@ -63,7 +63,7 @@ function Register() {
     <div className="register-container">
        <div className="leftpart">
          <div className="textpart">
-           <p className="text">Let’s Get Started!</p>
+           <p className="text">Let's Get Started!</p>
          </div>
        </div>
 
