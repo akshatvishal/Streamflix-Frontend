@@ -1,0 +1,181 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+  
+  .container-big{
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    color: white; 
+  }
+  
+  .navv{
+    display: flex;
+    gap: 4rem;
+    
+    align-items: center;
+    background-color: #e50914;
+    padding: 10px 20px;
+    
+    top: 0;
+    
+    height: 60px;
+    justify-content: space-between;
+  }
+
+  .navv div{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+ 
+  
+  
+  
+  
+  .navv button {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 0; 
+    transition: all 0.3s ease;
+  }
+
+  .navv button:hover{
+    background-color: white;
+    color: black;
+  }
+  
+  .navbar button:hover {
+    background-color: #fff;
+    color: #e50914;
+  }
+
+  .carrier{
+    
+    height: 80%;
+  }
+
+  .carrier div{
+    width: 100vw;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: 2rem;
+    
+  }
+
+  .carrier strong{
+    font-weight: bold;
+    margin-right: 1rem;
+    font-size: 2rem;
+  }
+  
+  
+  .navbar .home-btn {
+    margin-left: 0;
+  }
+  
+  
+  .navbar .logout-btn {
+    margin-right: 0;
+  }
+  
+  
+  .card {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #222; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .card h2 {
+    text-align: center;
+    color: #e50914; 
+    margin-bottom: 20px;
+  }
+  
+  
+  .card .info {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .card .info strong {
+    color: #e50914; 
+  }
+  
+  
+  .editForm label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #fff;
+  }
+  
+  .editForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 5px;
+  }
+  
+  .editForm button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .editForm button:hover {
+    background-color: #fff;
+    color: #e50914;
+  }
+  
+  
+  .editForm button.cancel-btn {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .editForm button.cancel-btn:hover {
+    background-color: #e50914;
+    color: #fff;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .card {
+      margin: 20px;
+      padding: 15px;
+    }
+  
+    .navbar button {
+      font-size: 12px;
+      padding: 8px 15px;
+    }
+  }
+  

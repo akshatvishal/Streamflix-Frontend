@@ -5,10 +5,13 @@
 .Boxes{
     display: flex;
     gap: 3rem;
+    overflow-y: auto;
+    padding: 2rem;
 }
 .Box img{
-    max-height: 25vh;
+    max-height: 35vh;
     max-width: 20vw;
+    border-radius: 2rem;
 }
 .Box p{
     margin-top: 0.6rem
@@ -17,12 +20,43 @@
     border-radius: 2rem;
     border: 2px solid;
     transition: 1s transform ease;
+    
 }
 .Box:hover{
     transform: scale(1.1);
 }
-.show{
-    color: black;
-    background-color: white;
-    width: max-content;
+.pop{
+ background-color: white;
+ border-bottom-left-radius: 2rem;
+ border-bottom-right-radius: 2rem;
+ color: black;
+ padding: 1rem;
 }   
+/* Target the scrollbar */
+::-webkit-scrollbar {
+    width: 4px; /* Width of the vertical scrollbar */
+    height: 4px; /* Height of the horizontal scrollbar */
+  }
+  
+  /* Track (background of the scrollbar) */
+  ::-webkit-scrollbar-track {
+    background: transparent; /* Fully transparent for invisibility */
+  }
+  
+  /* Thumb (scrollbar handle) */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2); /* Slightly visible with transparency */
+    border-radius: 10px; /* Rounded for a smoother look */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4); /* Slightly more visible on hover */
+  }
+  
+  /* Firefox scrollbar styling */
+  * {
+    scrollbar-width: thin; /* Makes the scrollbar thin */
+    scrollbar-color: rgba(251, 251, 251, 0.2) transparent; /* Handle and track */
+  }
+  

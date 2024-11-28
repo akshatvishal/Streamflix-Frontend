@@ -1,0 +1,29 @@
+.everything{
+    background-color: black;
+}
+.main{
+    height: fit-content;
+    color: white;
+    padding: 3rem 1rem;
+}
+.envelop_box{
+    display:grid;
+    margin-top: 2rem;
+    grid-template-columns: repeat(5,minmax(200px,1fr));
+    gap: 2rem;
+    list-style: none;
+}
+.envelop{
+    border-radius: 1rem;
+    width: fit-content;
+    height: fit-content;
+}
+.rating{
+    width: fit-content;
+    background-color: rgb(195, 195, 19);
+    color: black;
+    border-radius: 2rem;
+    padding: 0.2rem;
+    margin: -4px;
+    font-weight: 500;
+}
