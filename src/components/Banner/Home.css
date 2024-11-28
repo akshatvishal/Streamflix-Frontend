@@ -49,6 +49,9 @@
 .butt{
   padding: 0.8em 2.3rem;
 }
+.butt:hover{
+  cursor: pointer;
+}
 .button_watch{
   background-color: red;
   border: none;

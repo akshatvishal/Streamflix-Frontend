@@ -3,9 +3,9 @@
     padding: 0;
 }
 .nav{
-    position: absolute;
+    position: fixed;
     background-color: rgba(0, 0, 0, 0.212);
-    z-index: 1;
+    z-index: 3;
     display: flex;
     justify-content: space-around;
     max-height: 7vh;
@@ -14,10 +14,26 @@
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);    
     padding: 0.5rem;
 }
+.nav ul li:hover{
+    cursor: pointer;
+}
+
+
 .section{
     display: flex;
     list-style: none;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 50vw;
+}
+.profile{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: white;
+}
+.profilediv{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }

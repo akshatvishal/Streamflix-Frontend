@@ -1,27 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { Datacontext } from "../../Context/dataContext";
 import * as Component from "./Homecomponent";
 import axios from "axios";
 import "./Home.css";
+import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
-  const [data, setData] = useState([]);
+  const navigate = useNavigate();
+  const {data} = useContext(Datacontext)
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-
-  const getMovies = async () => {
-    try {
-      const response = await axios.get(
-        "https://streamflix-6rvf.onrender.com/api/movies/"
-      );
-      setData(response.data);
-    } catch (error) {
-      console.log("Error in fetching data from API:", error);
-    }
-  };
-
-  useEffect(() => {
-    getMovies();
-  }, []);
 
   useEffect(() => {
     let interval;
@@ -49,7 +37,7 @@ const Banner = () => {
 
   return (
     <>
-      <div
+      <div id="home" 
         className="banner"
         onMouseEnter={() => setIsHovered(true)} 
         onMouseLeave={() => setIsHovered(false)} 
@@ -63,7 +51,7 @@ const Banner = () => {
               <h2 className="movie-title">{data[currentIndex].title}</h2>
               <p className="description">{data[currentIndex].description}</p>
               <div className="buttons">
-                <button className="butt button_watch">
+                <button className="butt button_watch" onClick={()=>{navigate(`/Home/${data[currentIndex].id}`)}}>
                   <span className="icon">▶</span> WATCH
                 </button>
                 <button className="butt button_add-list">

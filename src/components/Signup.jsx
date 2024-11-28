@@ -1,6 +1,7 @@
 import { useState } from "react";
 import './Signup.css';
 import { useNavigate } from "react-router-dom";
+import Loader from "../Loader/Loader";
 
 function Register() {
   const [email, setEmail] = useState("");
@@ -11,13 +12,13 @@ function Register() {
   const [username, setUsername] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");
-
+  const [loading, setLoading] = useState(false); 
   const navigate=useNavigate();
 
   async function Signup(e) {
     e.preventDefault();
 
-   
+    setLoading(true);
     if (password !== confirmPassword) {
       setMessage("Passwords do not match!");
       return;
@@ -57,10 +58,14 @@ function Register() {
     } catch (error) {
       setMessage("An error occurred. Please try again later.");
     }
+    finally{
+      setLoading(false)
+    }
   }
 
   return (
     <div className="register-container">
+       {loading && <Loader />} 
        <div className="leftpart">
          <div className="textpart">
            <p className="text">Let's Get Started!</p>
@@ -170,7 +175,7 @@ function Register() {
           </div>
 
           <div className="button">
-          <button  type="submit">Create Account</button>
+          <button  type="submit" >Create Account</button>
           </div>
           
         </form>
