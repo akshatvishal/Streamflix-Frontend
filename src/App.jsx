@@ -6,7 +6,8 @@ import Signup from "./components/Signup";
 import LoginPage from "./components/LoginPage";
 import Description from "./components/Description/Description"
 import Search from "./components/Search/Search"
-import { DataProvider } from "./Context/dataContext";
+import { DataProvider } from "./Context/dataContext"; // Make sure this is at the top level
+import Profile from "./components/Profile/Profile";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/Home/:id" element={<Description />}></Route>
           <Route path="/Login" element={<LoginPage />}></Route>
           <Route path="/search" element={<Search />} />
+          <Route path="/Profile" element={<Profile />}></Route>
           
         </Routes>
       </Router>
