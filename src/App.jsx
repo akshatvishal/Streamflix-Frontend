@@ -4,6 +4,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Signup from "./components/Signup";
 import LoginPage from "./components/LoginPage";
+import Mylist from "./components/Mylist/Mylist"
 import Description from "./components/Description/Description"
 import Search from "./components/Search/Search"
 import { DataProvider } from "./Context/dataContext"; // Make sure this is at the top level

@@ -33,6 +33,7 @@ const Navbar = () => {
         <li onClick={()=>navigate('/Home/List')}>My list</li>
         <li>
         <input
+        className='search'
             type="text"
             placeholder="Search for a movie"
             value={searchInput}
