@@ -45,7 +45,6 @@ const Box = () => {
             {hoveredIndex === index && (
               <div className="pop">
                 <p className="BoxTitle">{item.title}</p>
-                <p className="BoxTitle">{item.title}</p>
               </div>
             )}
           </div>

@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import "./Recommend.css";
+import Thumbnail from "./Thumbnail";
+import axios from "axios";
 
 const Recommend = () => {
   const [recommend, setRecommend] = useState({});
+  const [thumbnail, setThumbnail] = useState(""); // Store the image URL as a string
   const [loading, setLoading] = useState("Loading...");
   const movieArr = [
     "Avatar",
-    "One Man's Hero",
-    "The Prisoner of Zenda",
+    "Inception",
+    "Pirates of the Caribbean: At World's End",
     "The Dark Knight",
     "Interstellar",
   ];
@@ -22,10 +24,11 @@ const Recommend = () => {
   const getRecommendation = async () => {
     const randomMovie = getRandomMovie();
     try {
+      // Fetch recommendations
       const response = await axios.get(
         `https://movie-relate.onrender.com/recommend?movie_name=${randomMovie}`
       );
-      setRecommend(response.data); // Update with API response
+      setRecommend(response.data);
     } catch (error) {
       console.error("Error in fetching data from API:", error);
       setLoading("Data not available");
@@ -34,7 +37,7 @@ const Recommend = () => {
 
   useEffect(() => {
     getRecommendation();
-  }, []); // Call the API once on component mount
+  }, []); 
 
   return (
     <div className="everything">
@@ -44,8 +47,8 @@ const Recommend = () => {
           <ul className="envelop_box">
             {recommend.recommendations.map((rec, index) => (
               <li key={index} className="envelop">
-                <h2>{rec.title}</h2>
-                <p>Rating: {rec.vote_average}</p>
+                <Thumbnail movie_title={rec.title} />
+                <p className="rating">Rating: {rec.vote_average}</p>
               </li>
             ))}
           </ul>

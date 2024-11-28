@@ -2,7 +2,7 @@
     background-color: black;
 }
 .main{
-    
+    height: fit-content;
     color: white;
     padding: 3rem 1rem;
 }
@@ -14,7 +14,16 @@
     list-style: none;
 }
 .envelop{
-    border: 2px solid;
     border-radius: 1rem;
-    padding: 2rem;
+    width: fit-content;
+    height: fit-content;
+}
+.rating{
+    width: fit-content;
+    background-color: rgb(195, 195, 19);
+    color: black;
+    border-radius: 2rem;
+    padding: 0.2rem;
+    margin: -4px;
+    font-weight: 500;
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
+import Navbar from "../Navbar/Navbar";
 
 const Profile = () => {
   const [profile, setProfile] = useState(null);
@@ -78,6 +79,7 @@ const Profile = () => {
   };
 
   return (
+    <>
     <div style={styles.card}>
       {!editing ? (
         <>
@@ -157,6 +159,7 @@ const Profile = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 
