@@ -3,6 +3,8 @@ import { useLocation } from "react-router-dom";
 import axios from "axios";
 import "./Search.css";
 import Navbar from "../Navbar/Navbar";
+import Card from "../Categories/Card";
+
 
 const Search = () => {
   const location = useLocation();
@@ -46,11 +48,7 @@ const Search = () => {
         {loading ? (
           <p>Loading...</p>
         ) : filteredMovies.length > 0 ? (
-          <ul>
-            {filteredMovies.map((movie) => (
-              <li key={movie.id}>{movie.title}</li>
-            ))}
-          </ul>
+          <Card category={filteredMovies} />
         ) : (
           <p>Not in our data</p>
         )}
